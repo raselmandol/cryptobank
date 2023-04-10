@@ -264,7 +264,7 @@ Route::middleware(['install'])->group(function () use ($email_verification, $all
                 Route::match(['get', 'post'], 'payment_requests/pay_now/{id}', 'Customer\PaymentRequestController@pay_now')->name('payment_requests.pay_now');
                 Route::get('payment_requests/cancel/{id}', 'Customer\PaymentRequestController@cancel')->name('payment_requests.cancel');
                 Route::resource('payment_requests', 'Customer\PaymentRequestController')->except([
-                    'edit', 'update', 'clear',
+                    'edit', 'update', 'destroy',
                 ]);
 
                 //Deposit Money
@@ -303,7 +303,7 @@ Route::middleware(['install'])->group(function () use ($email_verification, $all
 
                 //OPT Controller
                 Route::get('otp/generate', 'Customer\OTPController@generateOtp')->name('otp.generate');
-                Route::get('otp/resend', 'Customer\OTPController@resendOtp')->name('otp.send');
+                Route::get('otp/resend', 'Customer\OTPController@resendOtp')->name('otp.resend');
 
                 //Reports Controller
                 Route::match(['get', 'post'], 'reports/customer/transactions_report', 'Customer\ReportController@transactions_report')->name('customer_reports.transactions_report');
@@ -319,7 +319,7 @@ Route::middleware(['install'])->group(function () use ($email_verification, $all
     Route::get('/contact', 'Website\WebsiteController@contact');
     Route::post('/send_message', 'Website\WebsiteController@send_message');
     Route::get('/cookie/accept', 'Website\WebsiteController@cookie_accept')->name('cookie.accept');
-    if (env('APP_INSTALLED', false)) {
+    if (env('APP_INSTALLED', true)) {
         Route::get('/{slug?}', 'Website\WebsiteController@index');
     } else {
         Route::get('/', function () {
