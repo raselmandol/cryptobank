@@ -4,7 +4,7 @@
 
 
 Project Blockchain Bank is a web-based project made on PHP(Laravel), which is basically a online(Blockchain) based banking system. Users can deposit money, send money, withdraw money, take loan, make payment and many more and all the transections can be done by cryptocurrencies and popular payment systems(eg. Pypal, Blockchain, Stripe, Coinbase etc). This is a secure and safe way to keep and send money specially cryptocurrencies. The transections chain is recorded and quarantined so that the bad people can not make a change even if they access the transections chain, it's totally safe.
-In the control pannel, all possible secure systems are added. Main admin can give special users special roles so that every users can do their job individually.
+In the control panel, all possible secure systems are added. Main admin can give special users special roles so that every users can do their job individually.
 
 ## Acknowledgements
 -Thanks to all who helped.
