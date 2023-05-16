@@ -19,19 +19,19 @@ Project Blockchain Bank is a web-based project built with PHP(Laravel), which is
 
 ## Documentation
 
-- First you need to download this or clone this whole project.
-- Make sure extract all the zip files.
-- Edit the sample.env file put the server and database account details.
-- Rename the sample.env file to .env
-- Now import the sql file to database.
-- Change the admin email. The default login password is 'test'.
-- Now change the sendData and receive data files by changing the sender and receiver database details.
-- You are all set.
+-First, you need to download this or clone this whole project.
+-Make sure to extract all the zip files.
+-Edit the sample.env file and put the server and database account details.
+-Rename the sample.env file to .env
+-Now import the SQL file to the database.
+-Change the admin email. The default login password is 'test'.
+-Now change the sendData and receive data files by changing the sender and receiver database details.
+-You are all set.
 
 
 ## Features
 
-- Secure Transection
+- Secure Transaction
 - Live Data Update
 - Dark and other Themes
 - API based
